@@ -19,8 +19,8 @@ in ArcGIS Online unless noted).
       EXB redirect used to hold: `usace-wrises/resst-dev` was merged into
       `usace-wrises/resst` with its full history, and `base` in
       `vite.config.ts` is now `/resst/`.
-- [ ] Archive `usace-wrises/resst-dev` as-is (its frozen copy stays at
-      `/resst-dev/`).
+- [x] Archive `usace-wrises/resst-dev` as-is (done 2026-10-12; its frozen
+      copy stays at `/resst-dev/`).
 - [ ] In the EXB app, replace the welcome text with a short "RESST has
       moved" notice linking the new URL (leave the app functional during the
       parallel-run window).
