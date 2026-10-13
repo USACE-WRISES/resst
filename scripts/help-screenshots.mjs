@@ -12,7 +12,7 @@ import { mkdir } from "node:fs/promises";
 import { chromium } from "@playwright/test";
 
 const PORT = 4199;
-const BASE = `http://localhost:${PORT}/resst-dev/`;
+const BASE = `http://localhost:${PORT}/resst/`;
 const OUT = "public/help";
 const VIEW = { width: 1440, height: 900 };
 

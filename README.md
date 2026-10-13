@@ -2,10 +2,12 @@
 
 A static web application for exploring reservoir sediment-management case
 studies, sites, and literature — the maintained successor to the ArcGIS
-Experience Builder version of RESST.
+Experience Builder version of RESST. It was developed in
+[`usace-wrises/resst-dev`](https://github.com/USACE-WRISES/resst-dev) and
+moved here, history included, in October 2026.
 
-**Live application:** https://usace-wrises.github.io/resst-dev/
-**Data downloads:** the [`data-latest` release](https://github.com/USACE-WRISES/resst-dev/releases/tag/data-latest) (Shapefile, GeoPackage, File Geodatabase, CSV)
+**Live application:** https://usace-wrises.github.io/resst/
+**Data downloads:** the [`data-latest` release](https://github.com/USACE-WRISES/resst/releases/tag/data-latest) (Shapefile, GeoPackage, File Geodatabase, CSV)
 
 ## What's in the box
 
@@ -32,7 +34,7 @@ Experience Builder version of RESST.
 
 ```bash
 npm ci
-npm run dev        # dev server at http://localhost:5173/resst-dev/
+npm run dev        # dev server at http://localhost:5173/resst/
 npm run validate   # data checks (run after editing data/)
 npm run build:data # data/*.csv -> public/data/*.json
 npm test           # unit tests (filter-engine parity baselines)

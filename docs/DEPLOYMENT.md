@@ -11,8 +11,8 @@ Everything is automated through GitHub Actions; there is no server to run.
 | `data-exports.yml` | push touching `data/**` (or manual dispatch) | GDAL (`ogr2ogr`) builds Shapefiles, GeoPackage, File Geodatabase, CSV bundle → uploads to the rolling **`data-latest`** release |
 | `data-diff.yml` | PRs touching `data/**` | posts/updates one comment summarizing the data change |
 
-- **Site:** https://usace-wrises.github.io/resst-dev/ (Pages, build type
-  "GitHub Actions", HTTPS enforced). Base path is `/resst-dev/`
+- **Site:** https://usace-wrises.github.io/resst/ (Pages, build type
+  "GitHub Actions", HTTPS enforced). Base path is `/resst/`
   (`vite.config.ts` — change it if the repo is ever renamed).
 - **Rollback:** revert the offending commit on `main`; the deploy workflow
   redeploys the previous state. Data rollbacks are ordinary git reverts too.

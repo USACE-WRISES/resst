@@ -355,7 +355,7 @@ export function buildReportModel(inputs: ReportInputs): ReportModel {
       source: PROVENANCE.resst.source,
       version: PROVENANCE.resst.version,
       doi: null,
-      url: "https://usace-wrises.github.io/resst-dev/",
+      url: "https://usace-wrises.github.io/resst/",
       note: PROVENANCE.resst.note,
     });
   }

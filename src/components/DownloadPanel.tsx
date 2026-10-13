@@ -8,8 +8,8 @@ import type { DataManifest } from "../lib/types";
 import { actions } from "../state/store";
 import { useFocusTrap } from "../lib/useFocusTrap";
 
-const RELEASE_BASE = "https://github.com/USACE-WRISES/resst-dev/releases/download/data-latest";
-const REPO = "https://github.com/USACE-WRISES/resst-dev";
+const RELEASE_BASE = "https://github.com/USACE-WRISES/resst/releases/download/data-latest";
+const REPO = "https://github.com/USACE-WRISES/resst";
 
 const FILES = [
   { name: "resst-shapefiles.zip", label: "Shapefiles (sites + literature points)", note: "zipped, WGS84" },
@@ -56,7 +56,7 @@ export function DownloadPanel({ manifest }: { manifest: DataManifest }) {
           Shapefile).
         </p>
         <p className="muted">
-          The data and application live at <a href={REPO} target="_blank" rel="noopener noreferrer">USACE-WRISES/resst-dev</a>.
+          The data and application live at <a href={REPO} target="_blank" rel="noopener noreferrer">USACE-WRISES/resst</a>.
           Corrections and additions are welcome as pull requests; see the repository's data-editing guide.
         </p>
       </div>

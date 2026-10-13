@@ -15,10 +15,12 @@ in ArcGIS Online unless noted).
 
 ## Cutover
 
-- [ ] Point people at https://usace-wrises.github.io/resst-dev/ (or transfer
-      this repo over `usace-wrises/resst` when ready — GitHub redirects the
-      old repo URL after a rename/transfer; Pages URL then becomes
-      `/resst/`, so update `base` in `vite.config.ts` accordingly).
+- [x] Serve the app at https://usace-wrises.github.io/resst/, the URL the
+      EXB redirect used to hold: `usace-wrises/resst-dev` was merged into
+      `usace-wrises/resst` with its full history, and `base` in
+      `vite.config.ts` is now `/resst/`.
+- [ ] Archive `usace-wrises/resst-dev` as-is (its frozen copy stays at
+      `/resst-dev/`).
 - [ ] In the EXB app, replace the welcome text with a short "RESST has
       moved" notice linking the new URL (leave the app functional during the
       parallel-run window).
@@ -35,7 +37,8 @@ in ArcGIS Online unless noted).
       read-only as the historical record (recommended — the migration
       extracts under `RESST-migration/` were verified against them), or
       archive/export and remove.
-- [ ] Update the old `usace-wrises/resst` repository README to point here.
+- [x] `usace-wrises/resst` no longer needs a pointer README: it now hosts
+      this app, and its old redirect commits are kept in the history.
 
 ## After cutover
 

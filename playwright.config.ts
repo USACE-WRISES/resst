@@ -5,13 +5,13 @@ export default defineConfig({
   timeout: 60_000,
   retries: 0,
   use: {
-    baseURL: "http://localhost:4173/resst-dev/",
+    baseURL: "http://localhost:4173/resst/",
     viewport: { width: 1440, height: 900 },
   },
   webServer: {
     // Test against the production build, served the way Pages serves it.
     command: "npm run build:data && npx vite build && npx vite preview --port 4173 --strictPort",
-    url: "http://localhost:4173/resst-dev/",
+    url: "http://localhost:4173/resst/",
     reuseExistingServer: true,
     timeout: 120_000,
   },

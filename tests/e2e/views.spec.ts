@@ -25,7 +25,7 @@ test("the header switch offers the three views with the Map pressed", async ({ p
   await expect(group.getByRole("button")).toHaveText(["Map", "Dashboard", "Library"]);
   await expect(switchBtn(page, "Map")).toHaveAttribute("aria-pressed", "true");
   await expect(switchBtn(page, "Dashboard")).toHaveAttribute("aria-pressed", "false");
-  await expect(page).toHaveURL(/\/resst-dev\/$/);
+  await expect(page).toHaveURL(/\/resst\/$/);
 });
 
 test("the Dashboard sits over the map view, which stays laid out but inert", async ({ page }) => {
@@ -48,7 +48,7 @@ test("the Dashboard sits over the map view, which stays laid out but inert", asy
   await switchBtn(page, "Map").click();
   expect(await main.getAttribute("inert")).toBeNull();
   await expect(main).toHaveCSS("visibility", "visible");
-  await expect(page).toHaveURL(/\/resst-dev\/$/);
+  await expect(page).toHaveURL(/\/resst\/$/);
   await expect(page.locator(".skip-link")).toHaveCount(1);
 });
 
