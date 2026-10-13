@@ -37,8 +37,8 @@ Their upstream sources — `hydro.nationalmap.gov` (USGS WBD, public domain) and
 the CEC rivers service on `services7.arcgis.com` (CC BY 4.0) — are contacted
 only at build time by `npm run build:overlays`, never by the deployed app.
 
-No API keys, tokens, or secrets exist anywhere in the system. Glyph fonts for
-the report figure are self-hosted under `public/fonts/`.
+No API keys, tokens, or secrets exist anywhere in the system. The report
+figure draws no text, so it loads no glyph fonts.
 The e2e suite stays hermetic by route-stubbing every Esri and USGS tile
 endpoint (`tests/e2e/helpers/esriStub.ts`).
 

@@ -31,15 +31,15 @@ describe("setBasemap", () => {
 });
 
 describe("buildUsgsStyle", () => {
-  it("builds the raster style with the given glyph endpoint", () => {
-    const s = buildUsgsStyle("glyphs://x/{fontstack}/{range}.pbf");
-    expect(s.glyphs).toBe("glyphs://x/{fontstack}/{range}.pbf");
+  it("builds the raster style with no glyphs endpoint, since it draws no text", () => {
+    const s = buildUsgsStyle();
+    expect(s.glyphs).toBeUndefined();
     expect(Object.keys(s.sources)).toEqual(["usgsTopo"]);
     expect(s.layers.map((l) => l.id)).toEqual(["background", "usgs-topo"]);
   });
 
   it("draws its tiles from the shared USGS definition the Leaflet map also uses", () => {
-    const src = buildUsgsStyle("glyphs://x/{fontstack}/{range}.pbf").sources.usgsTopo as {
+    const src = buildUsgsStyle().sources.usgsTopo as {
       tiles: string[];
       attribution: string;
     };

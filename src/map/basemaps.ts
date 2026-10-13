@@ -44,16 +44,12 @@ export const ESRI_TOPO_RASTER_ATTRIBUTION =
 
 // ---- MapLibre style (report figure) ----------------------------------------
 
-export function buildUsgsStyle(glyphs?: string): StyleSpecification {
+// No glyphs URL: the figure draws a raster basemap, lines and circles, and
+// MapLibre fetches glyphs only for symbol layers that set text-field. A text
+// layer added later needs a glyphs endpoint serving real PBF ranges too.
+export function buildUsgsStyle(): StyleSpecification {
   return {
     version: 8,
-    // Self-hosted glyph PBFs (public/fonts) — no third-party font dependency.
-    // (The typeof guard keeps the module callable from node-side unit tests.)
-    glyphs:
-      glyphs ??
-      (typeof location === "undefined"
-        ? "fonts/{fontstack}/{range}.pbf"
-        : `${location.origin}${import.meta.env.BASE_URL}fonts/{fontstack}/{range}.pbf`),
     sources: {
       usgsTopo: {
         type: "raster",
